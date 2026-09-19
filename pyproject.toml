@@ -1,0 +1,26 @@
+[project]
+name = "razer-battery-status"
+version = "0.1.0"
+description = "Headless battery and charging alerts for a Razer DeathAdder V3 Pro on Windows"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "hidapi>=0.15.0,<0.16",
+    "win11toast>=0.36.3,<0.37",
+]
+
+[project.scripts]
+razer-battery-status = "razer_battery_status.cli:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1,<10",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
