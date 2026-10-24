@@ -4,7 +4,6 @@ from dataclasses import dataclass
 from functools import reduce
 from operator import xor
 
-
 REPORT_ID = 0x00
 REPORT_SIZE = 90
 FEATURE_REPORT_SIZE = REPORT_SIZE + 1

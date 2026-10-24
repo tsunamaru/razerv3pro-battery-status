@@ -12,7 +12,6 @@ from .hid_backend import DeviceUnavailable, HidBackend
 from .monitor import BatteryMonitor
 from .notifications import send_test_notification
 
-
 MUTEX_NAME = "Local\\RazerBatteryStatusMonitor"
 ERROR_ALREADY_EXISTS = 183
 
@@ -21,7 +20,7 @@ class SingleInstance:
     def __init__(self) -> None:
         self.handle: int | None = None
 
-    def __enter__(self) -> "SingleInstance":
+    def __enter__(self) -> SingleInstance:
         kernel32 = ctypes.windll.kernel32
         self.handle = kernel32.CreateMutexW(None, False, MUTEX_NAME)
         if not self.handle:

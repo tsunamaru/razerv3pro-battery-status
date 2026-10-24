@@ -8,7 +8,6 @@ from threading import Event
 from .hid_backend import BatterySnapshot, DeviceUnavailable, HidBackend
 from .notifications import Alert, AlertKind, WindowsNotifier
 
-
 LOW_BATTERY_PERCENT = 10.0
 LOW_BATTERY_RESET_PERCENT = 12.0
 

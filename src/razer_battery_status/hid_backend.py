@@ -2,8 +2,9 @@ from __future__ import annotations
 
 import threading
 import time
+from collections.abc import Iterable
 from dataclasses import dataclass
-from typing import Any, Iterable
+from typing import Any
 
 import hid
 
@@ -21,7 +22,6 @@ from .protocol import (
     build_request,
     parse_response,
 )
-
 
 RAZER_VENDOR_ID = 0x1532
 
