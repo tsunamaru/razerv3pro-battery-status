@@ -4,7 +4,6 @@ from razer_battery_status.hid_backend import BatterySnapshot, HidTarget
 from razer_battery_status.monitor import AlertState
 from razer_battery_status.notifications import AlertKind
 
-
 TARGET = HidTarget(
     path=b"test",
     product_id=0x00C3,
